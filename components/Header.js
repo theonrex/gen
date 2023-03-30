@@ -10,14 +10,14 @@ function NavbarMenu() {
       <nav className="navbar navbar-expand-lg   mb-4 " id="navbar">
         <div className='MID'>
         <div className="container-fluid container">
-          <a className="navbar-brand nav-link " href="/#">
+          <Link className="navbar-brand nav-link " href="/#">
             {" "}
-            <img
+            <Image
               src={logo}
               alt="logo"
               className="nav-logo"
             />
-          </a>
+          </Link>
           <button
             className="navbar-toggler bg-light"
             type="button"
@@ -51,20 +51,20 @@ function NavbarMenu() {
             <div className="offcanvas-body">
               <ul className="navtext navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#products">
+                  <Link className="nav-link" aria-current="page" href="#products">
                     Products
-                  </a>
+                  </Link>
                 </li>
                 
                 <li className="nav-item">
-                  <a className="nav-link" href="/whyus">
+                  <Link className="nav-link" href="/whyus">
                     About
-                  </a>
+                  </Link>
                 </li>{" "}
                 <li className="nav-item">
-                  <a className="nav-link" href="#Contact">
+                  <Link className="nav-link" href="#Contact">
                     Contact
-                  </a>
+                  </Link>
                 </li>{" "}
                 <li className="nav-item vertical-line"></li>
                 {/* <p>L</p> */}
