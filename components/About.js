@@ -20,6 +20,7 @@ once the volume on secondery market reach 2000 ETH we&apos;ll have a second aird
 <br/>Strong Together.</p></div>
     <div className='w-full h-full md:ml-4'>
         <Image src='/nftsgif.gif'
+        alt='logo'
         className='object-cover rounded-md md:w-[300px] md:h-[300px]'/>
     </div>  
 

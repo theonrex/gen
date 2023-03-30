@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { initOnboard } from "../ulits/onboard";
 import Image from "next/image";
+import Link from "next/link";
 import { config } from "../dapp.config";
 // import Navbars from "./Header";
 import {
@@ -124,6 +125,7 @@ export default function Mint() {
       <div className="relative w-full h-full flex flex-col items-center justify-center py-2">
         <Image
           src="/hero.jpg"
+          alt='logo'
           className="absolute inset-auto block w-full min-h-screen object-cover"
         />
         <div>

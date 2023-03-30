@@ -8,6 +8,7 @@ export default function Main() {
         <div className="w-full h-full flex flex-col items-center justify-center mt-20 ">
         <Image
           src="/Banner2.png"
+          alt='logo'
           className="w-screen h-auto  object-fill"
         />
         </div>

@@ -53,6 +53,7 @@ function Roadmap () {
  <div className="my4 w-full h-full pt-2 flex items-center ">
  <Image
  src="/Banner.png"
+ alt='logo'
  className="object-cover w-full rounded-md"/>
 </div>
  
