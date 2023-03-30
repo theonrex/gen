@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import logo from "../public/gr.png"
+import Link from 'next/link';
 
 
 function NavbarMenu() {

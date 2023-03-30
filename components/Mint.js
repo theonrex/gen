@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { initOnboard } from "../ulits/onboard";
+import Image from "next/image";
 import { config } from "../dapp.config";
 // import Navbars from "./Header";
 import {
@@ -121,7 +122,7 @@ export default function Mint() {
     {/* <Navbars /> */}
     <div className="min-h-screen h-full w-full overflow-hidden flex flex-col items-center justify-center bg-brand-background ">
       <div className="relative w-full h-full flex flex-col items-center justify-center py-2">
-        <img
+        <Image
           src="/hero.jpg"
           className="absolute inset-auto block w-full min-h-screen object-cover"
         />
@@ -148,7 +149,7 @@ export default function Mint() {
 
             <div>
               <div className="relative w-full">
-                {/* <img
+                {/* <Image
                 src="/nft.gif"
                   className="object-cover w-full mt-auto mb-0 sm:h-[280px] md:w-[250px] rounded-md border border-gray-100"
                 /> */}
@@ -282,7 +283,7 @@ export default function Mint() {
               <h3 className="rrex text-1xl text-white uppercase mt-2 font-normal">
                 Contract Address :
                 <br />
-                <a
+                <Link
                   href={`https://polygonscan.com/address/${config.contractAddress}`}
                   target="_blank"
                   rel="noreferrer"
@@ -291,7 +292,7 @@ export default function Mint() {
                   <span className="break-all ...">
                     {" " + config.contractAddress}
                   </span>
-                </a>
+                </Link>
               </h3>
             </div>
           </div>

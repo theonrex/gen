@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image'
 
 
 function Roadmap () {
@@ -51,7 +51,7 @@ function Roadmap () {
    
  </div>
  <div className="my4 w-full h-full pt-2 flex items-center ">
- <img
+ <Image
  src="/Banner.png"
  className="object-cover w-full rounded-md"/>
 </div>

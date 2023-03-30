@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 
 
@@ -18,7 +19,7 @@ Utility token airdrop once volume reach 1000 ETH on secondery market.Because wit
 once the volume on secondery market reach 2000 ETH we&apos;ll have a second airdrop of Baby PYYC.
 <br/>Strong Together.</p></div>
     <div className='w-full h-full md:ml-4'>
-        <img src='/nftsgif.gif'
+        <Image src='/nftsgif.gif'
         className='object-cover rounded-md md:w-[300px] md:h-[300px]'/>
     </div>  
 

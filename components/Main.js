@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 
 export default function Main() {
     return(
     <div id="home" className='overflow-hidden'>
         <div className="w-full h-full flex flex-col items-center justify-center mt-20 ">
-        <img
+        <Image
           src="/Banner2.png"
           className="w-screen h-auto  object-fill"
         />
