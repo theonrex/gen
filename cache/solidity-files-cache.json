@@ -1,0 +1,55 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\HP\\Desktop\\dan\\gen\\contracts\\TwelveKnights.sol": {
+      "lastModificationDate": 1680157840149,
+      "contentHash": "34917d6ca59d18f0c2369799c953c886",
+      "sourceName": "contracts/TwelveKnights.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0",
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Address",
+        "Context",
+        "Counters",
+        "ERC165",
+        "ERC721",
+        "ERC721Enumerable",
+        "GREATDANEAI",
+        "IERC165",
+        "IERC721",
+        "IERC721Enumerable",
+        "IERC721Metadata",
+        "IERC721Receiver",
+        "Ownable",
+        "SafeMath",
+        "Strings"
+      ]
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+Index.html
+style.css
 # dependencies
 /node_modules
 /.pnp
@@ -26,7 +28,14 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env*.local
+# .env*.local
+# .env 
+# /env
+# /.env
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
