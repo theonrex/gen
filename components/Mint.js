@@ -122,75 +122,6 @@ export default function Mint() {
   return (
     <>
     <div >
-      <div >
-        <div className="herotextimg nav">
-          <div>
-          <Image
-          src="/logo.PNG"
-          alt='logo'
-          width="50px"
-          height="50px"
-        />
-          </div>
-          <div className="navtext">
-            <Link
-             href={`https://polygonscan.com/address/${config.contractAddress}`}
-             target="_blank"
-             rel="noreferrer"
-             className="text-white mt-4 font-normal"
-            >Home</Link>
-            <Link
-             href={`https://polygonscan.com/address/${config.contractAddress}`}
-             target="_blank"
-             rel="noreferrer"
-             className="text-white mt-4 font-normal"
-            ><p className="ii">About</p></Link>
-            <Link
-             href={`https://polygonscan.com/address/${config.contractAddress}`}
-             target="_blank"
-             rel="noreferrer"
-             className="text-white mt-4 font-normal"
-            ><p className="ii">Roadmap</p></Link>
-            <Link
-             href={`https://polygonscan.com/address/${config.contractAddress}`}
-             target="_blank"
-             rel="noreferrer"
-             className="text-white mt-4 font-normal"
-            ><p className="ii">Team</p></Link>
-          </div>
-          <div className="links">
-          <Link
-         href={`https://polygonscan.com/address/${config.contractAddress}`}
-         target="_blank"
-         rel="noreferrer"
-         className="text-white mt-4 font-normal"
-        >
-           <Image
-          src="/social1.PNG"
-          alt='logo'
-          width="24px"
-          
-          height="24px"
-        />
-        </Link>
-          <Link
-         href={`https://polygonscan.com/address/${config.contractAddress}`}
-         target="_blank"
-         rel="noreferrer"
-         className="text-white mt-4 font-normal"
-        >
-           <Image
-          src="/social3.PNG"
-          alt='logo'
-          
-          width="24px"
-          height="24px"
-        />
-        </Link>
-          </div>
-        </div>
-        
-      </div>
       <div className="heroinner">
         <div>
       <div className="rrex">
@@ -361,8 +292,10 @@ export default function Mint() {
 
 
       </div>
+      
       </div>
     </div>
+    
     </>
   );
 }

@@ -1,22 +1,51 @@
-import React from "react";
-import logo from "../public/logo.png";
+import Link from "next/link";
+import Image from "next/image";
+import React, { useState } from "react";
+import Logo from "../public/logo.png";
+import NavItem from "./NavItem";
 
+const MENU_LIST = [
+  { text: "Home", href: "/" },
+  { text: "About Us", href: "/" },
+  { text: "Contact", href: "/" },
+];
 const Navbar = () => {
+  const [navActive, setNavActive] = useState(null);
+  const [activeIdx, setActiveIdx] = useState(-1);
+
   return (
-    <div className="Navbar">
-      <div className="flex items-center justify-between max-w-7xl m-auto py-5">
-        <img src={logo} alt="logo" />
-        <div className="flex items-center gap-11">
-          <ul className="flex items-center gap-5">
-            <li>Home</li>
-            <li>Twitter</li>
-            <li>Discord</li>
-            <li>Roadmap</li>
-          </ul>
-          <button>Mint Now</button>
+    <header>
+      <nav className={`nav`}>
+        <Link href={"/"}>
+          <a className="logoo">
+            <Image 
+            src={Logo}
+            />
+          </a>
+        </Link>
+        <div
+          onClick={() => setNavActive(!navActive)}
+          className={`nav__menu-bar`}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-      </div>
-    </div>
+        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+          {MENU_LIST.map((menu, idx) => (
+            <div
+              onClick={() => {
+                setActiveIdx(idx);
+                setNavActive(false);
+              }}
+              key={menu.text}
+            >
+              <NavItem active={activeIdx === idx} {...menu} />
+            </div>
+          ))}
+        </div>
+      </nav>
+    </header>
   );
 };
 
