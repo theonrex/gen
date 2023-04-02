@@ -20,6 +20,7 @@ const Navbar = () => {
           <a className="logoo">
             <Image 
             src={Logo}
+            alt="logo"
             />
           </a>
         </Link>
