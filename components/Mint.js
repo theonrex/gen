@@ -3,7 +3,7 @@ import { initOnboard } from "../ulits/onboard";
 import Image from "next/image";
 import Link from "next/link";
 import { config } from "../dapp.config";
-// import Navbars from "./Header";
+import Navbars from "./Header";
 import {
   getTotalMinted,
   getNumberMinted,
@@ -14,6 +14,7 @@ import {
   publicMint,
   whitelistedMint,
 } from "../ulits/interact";
+import Navbar from "./Navbar";
 
 export default function Mint() {
   const [maxSupply, setMaxSupply] = useState(0);
@@ -120,21 +121,80 @@ export default function Mint() {
 
   return (
     <>
-    {/* <Navbars /> */}
-    <div className="min-h-screen h-full w-full overflow-hidden flex flex-col items-center justify-center bg-brand-background ">
-      <div className="relative w-full h-full flex flex-col items-center justify-center py-2">
-        <Image
-          src="/hero.jpg"
+    <div >
+      <div >
+        <div className="herotextimg nav">
+          <div>
+          <Image
+          src="/logo.PNG"
           alt='logo'
-          className="absolute inset-auto block w-full min-h-screen object-cover"
+          width="50px"
+          height="50px"
         />
+          </div>
+          <div className="navtext">
+            <Link
+             href={`https://polygonscan.com/address/${config.contractAddress}`}
+             target="_blank"
+             rel="noreferrer"
+             className="text-white mt-4 font-normal"
+            >Home</Link>
+            <Link
+             href={`https://polygonscan.com/address/${config.contractAddress}`}
+             target="_blank"
+             rel="noreferrer"
+             className="text-white mt-4 font-normal"
+            ><p className="ii">About</p></Link>
+            <Link
+             href={`https://polygonscan.com/address/${config.contractAddress}`}
+             target="_blank"
+             rel="noreferrer"
+             className="text-white mt-4 font-normal"
+            ><p className="ii">Roadmap</p></Link>
+            <Link
+             href={`https://polygonscan.com/address/${config.contractAddress}`}
+             target="_blank"
+             rel="noreferrer"
+             className="text-white mt-4 font-normal"
+            ><p className="ii">Team</p></Link>
+          </div>
+          <div className="links">
+          <Link
+         href={`https://polygonscan.com/address/${config.contractAddress}`}
+         target="_blank"
+         rel="noreferrer"
+         className="text-white mt-4 font-normal"
+        >
+           <Image
+          src="/social1.PNG"
+          alt='logo'
+          width="24px"
+          
+          height="24px"
+        />
+        </Link>
+          <Link
+         href={`https://polygonscan.com/address/${config.contractAddress}`}
+         target="_blank"
+         rel="noreferrer"
+         className="text-white mt-4 font-normal"
+        >
+           <Image
+          src="/social3.PNG"
+          alt='logo'
+          
+          width="24px"
+          height="24px"
+        />
+        </Link>
+          </div>
+        </div>
+        
+      </div>
+      <div className="heroinner">
         <div>
-          <div
-            className=" z-1 md:max-w-3xl w-full bg-black/75 filter  py-4 rounded-md px-2 md:px-10 flex flex-col items-center
-            bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border-2 border-gray-100 backdrop-saturate-150"
-          >
-            <div className="rrex">
-              <h1 className="dayo font-Righteous uppercase font-bold text-3xl md:text-4xl text-brand-02 bg-clip-text mt-3">
+      <div className="rrex">
+              <h1 className="dayo2 font-Righteous uppercase font-bold text-3xl md:text-4xl text-brand-02 bg-clip-text mt-3">
                 {paused
                   ? "Paused"
                   : isWlMint
@@ -148,19 +208,30 @@ export default function Mint() {
                   : ""}
               </h3>
             </div>
+        <div className="heropage">
+        <div className="heroin"> <Image
+          src="/image.PNG"
+          alt='hro'
+          width="250px"
+          height="250px"
+        /></div>
+        <div className="mint">
+        <div>
 
-            <div>
-              <div className="relative w-full">
-                {/* <Image
-                src="/nft.gif"
-                  className="object-cover w-full mt-auto mb-0 sm:h-[280px] md:w-[250px] rounded-md border border-gray-100"
-                /> */}
-              </div>
+             
 
-              {/* Increment and decrement */}
-
-              <div className=" flex flex-col items-center w-full px-4 mt-16 md:mt-0 ">
-                <div className="font-Righteous flex items-center justify-between w-full">
+              <div className="minten " >
+              <p className="cen dayo ">
+                  Max Mint Amount Per Wallet:{" "}
+                  {paused
+                    ? "0"
+                    : isWlMint
+                    ? config.WlMaxMintAmount
+                    : config.maxMintAmount}{" "}
+                  <br />
+                  <span className="textcol">{totalMinted}</span> / {maxSupply}
+                </p>
+                <div className="minteng">
                   <button
                     className="w-12 h-8 md:w-14 md:h-10 flex items-center justify-center text-black hover:shadow-lg bg-gray-300 font-bold rounded-md"
                     onClick={decrementMintAmount}
@@ -180,7 +251,7 @@ export default function Mint() {
                       />
                     </svg>
                   </button>
-                  <p className="dayo flex items-center justify-center flex-1 grow text-center font-bold text-brand-02 text-3xl md:text-4xl">
+                  <p className="dayo">
                     {mintAmount}
                   </p>
                   <button
@@ -203,32 +274,23 @@ export default function Mint() {
                     </svg>
                   </button>
                 </div>
-                <p className="cen text-sm text-gray-100 tracking-widest mt-5">
-                  Max Mint Amount Per Wallet:{" "}
-                  {paused
-                    ? "0"
-                    : isWlMint
-                    ? config.WlMaxMintAmount
-                    : config.maxMintAmount}{" "}
-                  <br />
-                  <span className="text-col">{totalMinted}</span> / {maxSupply}
-                </p>
+                
 
-                <div className=" Greatdan border-t border-b py-4 mt-9 w-full">
-                  <div className="w-full text-xl font-Righteous flex items-center justify-between text-yellow-300">
-                    <p>Total</p>
+                <div className=" Greatdan ">
+                  <div className="dayo">
 
-                    <div className="flex items-center space-x-3">
+                    <div className="inmint">
+                        <p>Total</p>
                       <p>
                         {Number.parseFloat(
                           paused
-                            ? "0.00"
-                            : isWlMint && EligbleForFreeMint
-                            ? config.whitelistSalePrice * (mintAmount - 1)
-                            : isWlMint && !EligbleForFreeMint
-                            ? config.whitelistSalePrice * mintAmount
-                            : config.publicSalePrice * mintAmount
-                        ).toFixed(1)}{" "}
+                          ? "0.00"
+                          : isWlMint && EligbleForFreeMint
+                          ? config.whitelistSalePrice * (mintAmount - 1)
+                          : isWlMint && !EligbleForFreeMint
+                          ? config.whitelistSalePrice * mintAmount
+                          : config.publicSalePrice * mintAmount
+                          ).toFixed(1)}{" "}
                         MATIC
                       </p>{" "}
                       <span className="text-yellow-300">+ GAS</span>
@@ -241,7 +303,7 @@ export default function Mint() {
                   <div className="btn1">
 
                   <button
-                    className="btn"
+                    className="btn glowonhover"
                     // className={` ${
                       //   paused || isMinting
                       //     ? "bg-gray-900 cursor-not-allowed"
@@ -255,17 +317,20 @@ export default function Mint() {
                     </div>
                 ) : (
                   <div className="btn1">
-                    <button className="btn" onClick={connectWalletHandler}>
+                    <button className="btn glowonhover" onClick={connectWalletHandler}>
                       Connect wallet
                     </button>
                   </div>
                 )}
               </div>
             </div>
+            
 
-            {/*Status*/}
+        </div>
+        </div>
 
-            {status && (
+<div className="dayo">
+{status && (
               <div
                 className={`border ${
                   status.success
@@ -278,27 +343,24 @@ export default function Mint() {
                 </p>
               </div>
             )}
-
-            {/* Contract Address */}
-
-            <div className="flex flex-col items-center mt-4 py-2 w-full">
-              <h3 className="rrex text-1xl text-white uppercase mt-2 font-normal">
+              <h3 className="rrex ">
                 Contract Address :
                 <br />
                 <Link
                   href={`https://polygonscan.com/address/${config.contractAddress}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-white mt-4 font-normal"
+                  className="navtext"
                 >
-                  <span className="break-all ...">
+                  <span className="navtext">
                     {" " + config.contractAddress}
                   </span>
                 </Link>
               </h3>
             </div>
-          </div>
-        </div>
+
+
+      </div>
       </div>
     </div>
     </>
