@@ -30,6 +30,14 @@ function imgslide() {
                 <Image src="/55 (7).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
                 <Image src="/55 (2).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
                 <Image src="/55 (2).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/55 (5).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/TheYeti66.PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/55 (3).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/55 (6).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/55 (7).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/55 (7).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/55 (2).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
+                <Image src="/55 (2).PNG" alt="logo" width="200px" height="200px" className="sliderimg" />
               </div>
             </li>
           </div>

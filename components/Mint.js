@@ -123,6 +123,11 @@ export default function Mint() {
     <>
     <div >
       <div className="heroinner">
+      <div className="heroin"> <Image
+          src="/170982.jpg"
+          alt='hro'
+          layout="fill"
+        /></div>
         <div>
       <div className="rrex">
               <h1 className="dayo2 font-Righteous uppercase font-bold text-3xl md:text-4xl text-brand-02 bg-clip-text mt-3">
