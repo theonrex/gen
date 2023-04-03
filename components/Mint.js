@@ -146,7 +146,7 @@ export default function Mint() {
             </div>
         <div className="heropage">
         <div className="heroin"> <Image
-          src={"https://drive.google.com/file/d/12oA2k_ynfL_wfur0YPKnoU_YChXhm-Pu/view?usp=share_link"}
+          src="https://drive.google.com/file/d/12oA2k_ynfL_wfur0YPKnoU_YChXhm-Pu/view?usp=share_link"
           alt='hro'
           width="250px"
           height="250px"
